@@ -1,0 +1,112 @@
+body {
+  background-color: #560bad;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  font-size: 22px;
+}
+.container.weather-app {
+  padding: 20px;
+  margin: 20px auto 0px auto;
+  border-radius: 10px;
+  border: 1px solid #7209b7;
+  max-width: 800px;
+}
+
+.searc-field {
+  margin: 5px;
+  font-size: 1.4rem;
+}
+
+.main-info,
+.other-parameters {
+  background-color: rgba(114, 9, 183, 0.2);
+}
+.main-info {
+  border: 2px solid #7209b7;
+  border-radius: 10px;
+}
+.other-parameters {
+  border: 2px solid #7209b7;
+  border-radius: 10px;
+}
+.other-parameters ul {
+  list-style: none;
+}
+.CityName {
+  font-weight: 800;
+}
+.CountryName {
+  font-size: 2rem;
+  color: #fdc500;
+}
+.temp {
+  color: #fffb80;
+  font-size: 36px;
+  font-weight: 800;
+}
+.DayOfWeek {
+  color: #2fff00;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.WeatherDescription {
+  font-size: 1.5rem;
+  color: #56cfe1;
+}
+.current-btn {
+  background-color: #56cfe1;
+  color: #9d4edd;
+  border: 1px solid #9d4edd;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 120px;
+  height: 50px;
+  margin: 10px -15px;
+  transition: all 100ms ease-in-out;
+}
+.search-btn {
+  background-color: #9d4edd;
+  color: #56cfe1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid #56cee183;
+  width: 120px;
+  height: 50px;
+  margin: 10px 30px 10px 55px;
+  transition: all 100ms ease-in-out;
+}
+.current-btn:hover {
+  background-color: #56cee183;
+  border: 1px solid #56cfe1;
+  color: #56cfe1;
+}
+
+.search-btn:hover {
+  border: 1px solid #56cfe1;
+  color: #56cfe1;
+  background-color: #9d4edd92;
+}
+.searc-field {
+  border: 2px solid #9d4edd92;
+  background-color: #ebe0ff;
+  color: #560bad;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 540px) {
+  html {
+    overflow-x: none;
+  }
+  .main-info {
+    margin: 10px auto;
+    font-size: smaller;
+  }
+  .other-parameters {
+    margin: 10px auto;
+  }
+  .current-btn {
+    margin: 10px 0;
+  }
+}
