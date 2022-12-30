@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 // components takes precedence over default styles.
 import "@fontsource/roboto"; // Defaults to weight 400.
 import axios from "axios";
+import FormatedDate from "./FormatedDate";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -20,7 +21,7 @@ export default function Weather() {
       country: response.data.country,
       icon: response.data.condition.icon_url,
       description: response.data.condition.description,
-      dayOfWeek: "Saturday",
+      date: new Date(response.data.time * 1000),
     });
   }
 
@@ -54,18 +55,13 @@ export default function Weather() {
         <div className="row justify-content-between mt-md-5 weather-info-row">
           <div className="col-md-7 main-info">
             <h1>
-              <span className="{cityName}">{weatherData.cityName},</span>{" "}
+              <span className="cityName">{weatherData.cityName},</span>{" "}
               <span className="CountryName">{weatherData.country}</span>
             </h1>
-            <div className="date d-flex flex-row">
-              <h3 className="DayOfWeek text-capitalize pe-2">
-                {weatherData.dayOfWeek}
+            <h3 className="DayOfWeek ">
+                <FormatedDate date={weatherData.date} />
               </h3>
-              <p className="align-self-start  time">
-                <span>{} Hours</span>:<span>Minute</span>
-              </p>
-            </div>
-            <p className="WeatherDescription text-capitalize">
+              <p className="WeatherDescription text-capitalize">
               {weatherData.description}
             </p>
             <div className="temp-row d-flex flex-row align-items-start">

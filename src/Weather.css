@@ -26,8 +26,9 @@ body {
   border: 2px solid #7209b7;
   border-radius: 10px;
 }
-.CityName {
-  font-weight: 800;
+.cityName {
+  font-family: "Seymour One", sans-serif;
+ 
 }
 .CountryName {
   font-size: 2rem;
@@ -54,16 +55,18 @@ body {
 }
 .DayOfWeek {
   color: #2fff00;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: 'Anton', sans-serif;
 }
 .WeatherDescription {
   font-size: 1.5rem;
   color: #56cfe1;
+  font-weight: 800;
 }
 .other-parameters {
   border: 2px solid #7209b7;
   border-radius: 10px;
+  font-weight: 500;
 }
 .other-parameters ul {
   list-style: none;
