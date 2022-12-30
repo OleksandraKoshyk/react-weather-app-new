@@ -40,10 +40,23 @@ body {
   font-size: 2rem;
   color: #fdc500;
 }
+.temp-row div {
+  margin: 0;
+  }
+  .weather-icon {
+    width: 180px;
+    position: relative;
+    top:-52px;
+  }
 .temp {
+  line-height: 1;
   color: #fffb80;
-  font-size: 36px;
+  font-size: 5rem;
   font-weight: 800;
+}
+.units {
+  color: #fffb80;
+  font-size: 1.6rem;
 }
 .DayOfWeek {
   color: #2fff00;
@@ -53,6 +66,7 @@ body {
 .WeatherDescription {
   font-size: 1.5rem;
   color: #56cfe1;
+  text-transform: capitalize;
 }
 .current-btn {
   background-color: #56cfe1;
