@@ -26,13 +26,6 @@ body {
   border: 2px solid #7209b7;
   border-radius: 10px;
 }
-.other-parameters {
-  border: 2px solid #7209b7;
-  border-radius: 10px;
-}
-.other-parameters ul {
-  list-style: none;
-}
 .CityName {
   font-weight: 800;
 }
@@ -40,14 +33,15 @@ body {
   font-size: 2rem;
   color: #fdc500;
 }
+
 .temp-row div {
   margin: 0;
-  }
-  .weather-icon {
-    width: 180px;
-    position: relative;
-    top:-52px;
-  }
+}
+.weather-icon {
+  width: 180px;
+  position: relative;
+  top: -52px;
+}
 .temp {
   line-height: 1;
   color: #fffb80;
@@ -66,7 +60,13 @@ body {
 .WeatherDescription {
   font-size: 1.5rem;
   color: #56cfe1;
-  text-transform: capitalize;
+}
+.other-parameters {
+  border: 2px solid #7209b7;
+  border-radius: 10px;
+}
+.other-parameters ul {
+  list-style: none;
 }
 .current-btn {
   background-color: #56cfe1;
