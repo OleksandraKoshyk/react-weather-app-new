@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 // components takes precedence over default styles.
 import "@fontsource/roboto"; // Defaults to weight 400.
 import FormatedDate from "./FormatedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   return (
@@ -33,6 +34,9 @@ export default function Weather(props) {
       </div>
       <div className="col-md-4 other-parameters d-flex justify-content-end align-items-end">
         <ul className="">
+          <li>
+            <WeatherIcon code={props.data.icondescription} />
+          </li>
           <li>Humidity: {props.data.humidity}%</li>
           <li>Wind: {props.data.wind} km/h</li>
           <li>Pressure: {props.data.pressure} hPa</li>

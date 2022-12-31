@@ -22,6 +22,7 @@ export default function Search() {
       cityName: response.data.city,
       country: response.data.country,
       icon: response.data.condition.icon_url,
+      icondescription: response.data.condition.icon,
       description: response.data.condition.description,
       date: new Date(response.data.time * 1000),
     });
