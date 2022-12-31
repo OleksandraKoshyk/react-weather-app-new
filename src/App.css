@@ -1,3 +1,10 @@
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  background-image: url("https://besthqwallpapers.com/Uploads/3-12-2020/148131/thumb2-blue-purple-abstraction-polygon-abstraction-background-blue-lines-background-lines-abstraction-creative-blue-background.jpg");
+  background-size:cover;
+  
+}
+footer {
+  font-size: 16px;
+  text-align: center;
 }
