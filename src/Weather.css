@@ -14,10 +14,30 @@ body {
 }
 
 .searc-field {
-  margin: 5px;
-  font-size: 1.4rem;
+  border: 2px solid #9d4edd92;
+  background-color: #ebe0ff;
+  color: #560bad;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+}
+.search-btn {
+  background-color: #9d4edd;
+  color: #56cfe1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid #56cee183;
+  width: 120px;
+  height: 50px;
+  margin: 10px 30px 10px 30px;
+  transition: all 100ms ease-in-out;
 }
 
+.search-btn:hover {
+  border: 1px solid #56cfe1;
+  color: #56cfe1;
+  background-color: #9d4edd92;
+}
 .main-info,
 .other-parameters {
   background-color: rgba(114, 9, 183, 0.2);
@@ -68,48 +88,8 @@ body {
 .other-parameters ul {
   list-style: none;
 }
-.current-btn {
-  background-color: #56cfe1;
-  color: #9d4edd;
-  border: 1px solid #9d4edd;
-  font-weight: bold;
-  font-size: 1.2rem;
-  width: 120px;
-  height: 50px;
-  margin: 10px -15px;
-  transition: all 100ms ease-in-out;
-}
-.search-btn {
-  background-color: #9d4edd;
-  color: #56cfe1;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border: 1px solid #56cee183;
-  width: 120px;
-  height: 50px;
-  margin: 10px 30px 10px 55px;
-  transition: all 100ms ease-in-out;
-}
-.current-btn:hover {
-  background-color: #56cee183;
-  border: 1px solid #56cfe1;
-  color: #56cfe1;
-}
 
-.search-btn:hover {
-  border: 1px solid #56cfe1;
-  color: #56cfe1;
-  background-color: #9d4edd92;
-}
-.searc-field {
-  border: 2px solid #9d4edd92;
-  background-color: #ebe0ff;
-  color: #560bad;
-  width: 250px;
-  height: 50px;
-  border-radius: 10px;
-}
-@media screen and (min-width: 540px) {
+@media screen and (max-width: 540px) {
   html {
     overflow-x: none;
   }
@@ -120,7 +100,7 @@ body {
   .other-parameters {
     margin: 10px auto;
   }
-  .current-btn {
+  .search-btn {
     margin: 10px 0;
   }
 }

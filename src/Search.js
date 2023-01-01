@@ -42,7 +42,6 @@ export default function Search() {
   if (weatherData.ready) {
     return (
       <div className="container weather-app">
-        <div className="row search-row">
           <div className="col-md-auto">
             <form onSubmit={handleSubmit}>
               <input
@@ -60,14 +59,10 @@ export default function Search() {
               />
             </form>
           </div>
-          <div className="col-md-auto">
-            <button type="button" className="btn current-btn">
-              Current
-            </button>
-          </div>
+          
+          <Weather data={weatherData} />
         </div>
-        <Weather data={weatherData} />
-      </div>
+      
     );
   } else {
     search();
