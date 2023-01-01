@@ -17,7 +17,7 @@ body {
   border: 2px solid #9d4edd92;
   background-color: #ebe0ff;
   color: #560bad;
-  width: 500px;
+  width: 348px;
   height: 50px;
   border-radius: 10px;
 }
@@ -32,8 +32,25 @@ body {
   margin: 10px 30px 10px 30px;
   transition: all 100ms ease-in-out;
 }
+.current-btn {
+  background-color: #56cfe1;
+  color: #9d4edd;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid #9d4edd;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+
+  transition: all 100ms ease-in-out;
+}
 
 .search-btn:hover {
+  border: 1px solid #56cfe1;
+  color: #56cfe1;
+  background-color: #9d4edd92;
+}
+.current-btn:hover {
   border: 1px solid #56cfe1;
   color: #56cfe1;
   background-color: #9d4edd92;
@@ -89,7 +106,7 @@ body {
   list-style: none;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 570px) {
   html {
     overflow-x: none;
   }
@@ -101,6 +118,9 @@ body {
     margin: 10px auto;
   }
   .search-btn {
-    margin: 10px 0;
+    margin: 10px 0px;
+  }
+  .current-btn {
+    margin: 10px 0px;
   }
 }

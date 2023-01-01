@@ -10,7 +10,7 @@ import Weather from "./Weather";
 
 export default function Search() {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState("Jelenia Gora");
+  const [city, setCity] = useState("zaporizhzhia");
 
   function handleSearch(response) {
     setWeatherData({
@@ -38,31 +38,35 @@ export default function Search() {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=4e3d43265f7f3448fot5bf7a6b40260b&units=metric`;
     axios.get(apiUrl).then(handleSearch);
   }
+  function searchCurrent(event) {
+    navigator.geolocation.getCurrentPosition(WeatherPosition);
+  }
+  function WeatherPosition(position) {
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${lat}&lon=${long}&key=4e3d43265f7f3448fot5bf7a6b40260b&units=metric`;
+    axios.get(apiUrl).then(handleSearch);
+  }
 
   if (weatherData.ready) {
     return (
       <div className="container weather-app">
-          <div className="col-md-auto">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Type a city..."
-                autoFocus="on"
-                className="searc-field"
-                onChange={handleCityChange}
-              ></input>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Type a city..."
+            autoFocus="on"
+            className="searc-field"
+            onChange={handleCityChange}
+          ></input>
 
-              <input
-                type="submit"
-                className="btn search-btn"
-                value={"Search"}
-              />
-            </form>
-          </div>
-          
-          <Weather data={weatherData} />
-        </div>
-      
+          <input type="submit" className="btn search-btn" value={"Search"} />
+        </form>
+        <button className="current-btn" onClick={searchCurrent}>
+          Current
+        </button>
+        <Weather data={weatherData} />
+      </div>
     );
   } else {
     search();
