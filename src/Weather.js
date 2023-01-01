@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 // Put any other imports below so that CSS from your
