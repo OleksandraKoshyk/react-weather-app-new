@@ -26,6 +26,7 @@ export default function Weather(props) {
           <div className="Icon ">
             <img
               src={props.data.icon}
+              alt={props.data.description}
               className="img img-fluid weather-icon align-self-start"
             />
           </div>
