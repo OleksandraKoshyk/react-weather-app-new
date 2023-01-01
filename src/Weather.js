@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fontsource/roboto"; // Defaults to weight 400.
 import FormatedDate from "./FormatedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather(props) {
   return (
@@ -28,8 +29,7 @@ export default function Weather(props) {
               className="img img-fluid weather-icon align-self-start"
             />
           </div>
-          <div className="temp align-self-start">{props.data.temperature}</div>{" "}
-          <div className="units">℃ | ℉</div>
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
       </div>
       <div className="col-md-4 other-parameters d-flex justify-content-end align-items-end">
