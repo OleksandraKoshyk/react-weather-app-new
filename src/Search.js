@@ -7,6 +7,7 @@ import "@fontsource/roboto"; // Defaults to weight 400.
 import axios from "axios";
 
 import Weather from "./Weather";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Search() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -66,6 +67,7 @@ export default function Search() {
           Current
         </button>
         <Weather data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
