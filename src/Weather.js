@@ -10,7 +10,7 @@ import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather(props) {
   return (
-    <div className="row justify-content-between mt-md-5 weather-info-row">
+    <div className="row mt-md-5 justify-content-around weather-info-row">
       <div className="col-md-7 main-info">
         <h1>
           <span className="cityName">{props.data.cityName},</span>{" "}
