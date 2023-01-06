@@ -67,7 +67,7 @@ export default function Search() {
           Current
         </button>
         <Weather data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast city={weatherData.cityName} />
       </div>
     );
   } else {
